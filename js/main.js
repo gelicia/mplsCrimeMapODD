@@ -1,7 +1,7 @@
 function loadDataset(){
 	var width = 810;
 	var height = 600;
-	var regex = /[\s]/g;
+	var regex = /[\s\.]/g;
 	//so many magic numbers...TODO
 	var path = d3.geo.path().projection(
 		d3.geo.mercator().center([-93.26144099999999, 44.970675]).

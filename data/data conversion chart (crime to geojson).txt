@@ -1,0 +1,19 @@
+Data Conversion Chart
+I changed the geojson because I think the police might be more consistant with their neighborhood names. If this is wrong we might have to have a reference table? 
+
+Mystery neighborhoods?
+humboldtindustrial
+camdenindustrial
+phillips
+
+Changed (spaces and periods removed):
+columbia to COLUMBIA PARK
+nearnorth to NEAR - NORTH
+nicolletisland to NICOLLET ISLAND - EAST BANK
+marcy-holmes to MARCY HOLMES
+university to UNIVERSITY OF MINNESOTA
+prospectpark to PROSPECT PARK - EAST RIVER ROAD
+cedar-riverside to CEDAR RIVERSIDE
+stevenssquare to STEVENS SQUARE - LORING HEIGHTS
+cedar-isles to CEDAR - ISLES - DEAN
+northrup to NORTHROP
