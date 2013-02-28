@@ -35,7 +35,7 @@ function loadDataset(){
 	});
 
    var ds = new Miso.Dataset({
-		url : "data/201301.csv",
+		url : "data/201202.csv",
 		delimiter : ","
 		});
 
@@ -47,14 +47,16 @@ function loadDataset(){
 				this.each(
 					function(row){
 						//console.log(row.NEIGHBORHOOD.replace(regex, "").toLowerCase() + " = " + row["Total "]);
-
-						d3.select("#" + (row.NEIGHBORHOOD).replace(regex, "").toLowerCase())
-						.attr({
-							fill : colorRange(row["Total "])
-						})
-						.on("click", function(d) {
-							console.log((d.properties.name).replace(regex, "").toLowerCase() + " " + row["Total "]);
-						});
+						if (row.NEIGHBORHOOD !== null){
+							d3.select("#" + (row.NEIGHBORHOOD).replace(regex, "").toLowerCase())
+								.attr({
+									fill : colorRange(row["Total "])
+								})
+								.on("click", function(d) {
+									console.log((d.properties.name).replace(regex, "").toLowerCase() + " " + row["Total "]);
+								});
+						}
+						
 					}
 				);
 			}
