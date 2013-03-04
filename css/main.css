@@ -34,6 +34,15 @@ margin: 0;
 padding: 5px 20px; 
 }
 
+.slider {
+width:230px;
+position:relative;
+margin-top:0;
+margin-left:20px;
+margin-bottom:20px;
+padding:0 10px;
+}
+
 #left {
 position: absolute;
 left: 0;
