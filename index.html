@@ -28,7 +28,7 @@
           max : 12,
           value: 0,
           slide: function( event, ui ) {
-             $( "#month" ).html( offsetToMonth(ui.value));
+             $( "#month" ).html( "<h2>" + offsetToMonth(ui.value) + "</h2>");
           },
           change: function() {
               redraw();
@@ -47,9 +47,9 @@
     <div id="right"></div>
 
     <div id="content">
-      <p>Slide to proceed through time. Once you click on the slider you can use arrow keys on your keyboard.</p>
+      <p>Slide to proceed through time. Once you click on the slider you can use arrow keys on your keyboard. Mouse over a neighborhood for the name.</p>
       <input type="checkbox" id="noDW" onclick="redraw();"> Disable Downtown West<br>
-      <div id="month">January 2012</div>
+      <div id="month"><h2>January 2012</h2></div>
       <div id="sliderMonth" class="slider"></div>
       <svg></svg>
     </div>

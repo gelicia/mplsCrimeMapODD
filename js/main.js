@@ -120,7 +120,8 @@ function loadDataset(){
 					fill : "#666666", //Init at gray to show neighborhoods not matched up
 					stroke : "#000000",
 					id : function(d) {return (d.properties.name).replace(regex, "").toLowerCase();},
-					"dataDate" : "00"
+					"dataDate" : "00",
+					"title" : function(d) {return (d.properties.name);}
 				}
 			)
 			.on("click", function(d) {
