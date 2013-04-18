@@ -33,6 +33,12 @@ function dateToFileName(){
 	return String(dateOfInterest.getFullYear()) + monthStr;
 }
 
+//Init is to make sure everything loads properly
+function init(){
+	var loadPromise = loadDataset();
+	loadPromise.done(redraw());
+}
+
 function redraw(){
 		var noDowntownWest = $(noDW).attr('checked') === undefined ? false : true;
 
@@ -92,6 +98,8 @@ function redraw(){
 }
 
 function loadDataset(){
+	var deferred = $.Deferred();
+
 	var width = 810;
 	var height = 600;
 	
@@ -108,7 +116,7 @@ function loadDataset(){
 	})
 	.append("g");
 
-   d3.json("data/minneapolis.geojson", function(collection) {
+   var geoJson = d3.json("data/minneapolis.geojson", function(collection) {
 		neigh
 			.selectAll("path")
 			.data(collection.features)
@@ -129,5 +137,14 @@ function loadDataset(){
 			});
 	});
 
-   redraw();
+   //get the crime and neighborhood listings for selective toggling
+   //neighborhood listings come from the original geojson
+   //the crimes list assumes the first crime list has all the crimes (the crimes list was consistant for 2012)
+
+   var crimesList;
+
+   var neighborhoodList;
+
+   deferred.resolve();
+   return deferred.promise();
 }

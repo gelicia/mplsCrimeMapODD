@@ -39,7 +39,7 @@
 
   </head> 
 
-  <body onLoad="loadDataset()">
+  <body onLoad="init()">
     <h2>Minneapolis Crime map</h2>
     <h1></h1>
     <div id="left"></div>
@@ -48,10 +48,13 @@
 
     <div id="content">
       <p>Slide to proceed through time. Once you click on the slider you can use arrow keys on your keyboard. Mouse over a neighborhood for the name.</p>
-      <input type="checkbox" id="noDW" onclick="redraw();"> Disable Downtown West<br>
+      <p><input type="checkbox" id="noDW" onclick="redraw();">  Disable Downtown West</p>
       <div id="month"><h2>January 2012</h2></div>
       <div id="sliderMonth" class="slider"></div>
+      <div id="neighborhoodSelect"></div>
+      <div id="crimeSelect"></div>
       <svg></svg>
+
     </div>
   </body>
 </html>
