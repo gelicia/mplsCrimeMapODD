@@ -149,6 +149,5 @@ function loadDataset(){
 
    var neighborhoodList;
 
-   //deferred.resolve();
    return deferred.promise();
 }
