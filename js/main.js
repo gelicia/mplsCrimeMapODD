@@ -36,7 +36,9 @@ function dateToFileName(){
 //Init is to make sure everything loads properly
 function init(){
 	var loadPromise = loadDataset();
-	loadPromise.done(redraw());
+	loadPromise.done( function(){
+		redraw();
+	});
 }
 
 function redraw(){
@@ -135,6 +137,8 @@ function loadDataset(){
 			.on("click", function(d) {
 				console.log((d.properties.name).replace(regex, "").toLowerCase());
 			});
+
+			deferred.resolve();
 	});
 
    //get the crime and neighborhood listings for selective toggling
@@ -145,6 +149,6 @@ function loadDataset(){
 
    var neighborhoodList;
 
-   deferred.resolve();
+   //deferred.resolve();
    return deferred.promise();
 }
