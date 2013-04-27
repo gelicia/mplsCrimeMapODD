@@ -141,8 +141,6 @@ function loadDataset(){
 			deferred.resolve();
 	});
 
-   //get the crime and neighborhood listings for selective toggling
-   //neighborhood listings come from the original geojson
    //the crimes list assumes the first crime list has all the crimes (the crimes list was consistant for 2012)
 
    var crimesList;
